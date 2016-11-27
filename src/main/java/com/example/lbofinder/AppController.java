@@ -66,15 +66,15 @@ public class AppController implements Initializable {
         wrapText1.setSelected(true);
 
         final ObservableList<MyLocale> list = FXCollections.observableArrayList();
-        MyLocale defaultLocale = new MyLocale(Locale.getDefault());
+        MyLocale defaultMyLocale = new MyLocale(Locale.getDefault());
         for (final Locale locale : Locale.getAvailableLocales()) {
-            final MyLocale locale2 = new MyLocale(locale);
+            final MyLocale myLocale = new MyLocale(locale);
             if (locale == Locale.getDefault()) {
-                defaultLocale = locale2;
+                defaultMyLocale = myLocale;
             }
-            list.add(locale2);
+            list.add(myLocale);
         }
         locale1.setItems(list.sorted());
-        locale1.getSelectionModel().select(defaultLocale);
+        locale1.getSelectionModel().select(defaultMyLocale);
     }
 }
