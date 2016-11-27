@@ -21,7 +21,7 @@ import javafx.scene.text.TextFlow;
 class MyLocale {
     Locale locale;
 
-    MyLocale(Locale locale) {
+    MyLocale(final Locale locale) {
         this.locale = locale;
     }
 
@@ -41,7 +41,7 @@ public class AppController implements Initializable {
     @FXML
     CheckBox wrapText1;
 
-    private Color[] colors = { Color.rgb(128, 0, 0), Color.rgb(0, 64, 32) };
+    private final Color[] colors = { Color.rgb(128, 0, 0), Color.rgb(0, 64, 32) };
 
     @FXML
     protected void updateText(final ActionEvent ev) {
