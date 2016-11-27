@@ -17,17 +17,17 @@ import javafx.scene.control.TextArea;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import javafx.util.StringConverter;
 
-class MyLocale {
-    Locale locale;
-
-    MyLocale(final Locale locale) {
-        this.locale = locale;
+class LocaleStringConverter extends StringConverter<Locale> {
+    @Override
+    public String toString(Locale locale) {
+        return locale.getDisplayName();
     }
 
     @Override
-    public String toString() {
-        return this.locale.getDisplayName();
+    public Locale fromString(String languageTag) {
+        return Locale.forLanguageTag(languageTag);
     }
 }
 
@@ -37,7 +37,7 @@ public class AppController implements Initializable {
     @FXML
     TextArea textarea1;
     @FXML
-    ComboBox<MyLocale> locale1;
+    ComboBox<Locale> locale1;
     @FXML
     CheckBox wrapText1;
 
@@ -47,7 +47,7 @@ public class AppController implements Initializable {
     protected void updateText(final ActionEvent ev) {
         final String text = textarea1.getText();
         final List<Text> texts = new ArrayList<Text>();
-        final Locale locale = locale1.getSelectionModel().getSelectedItem().locale;
+        final Locale locale = locale1.getSelectionModel().getSelectedItem();
 
         final TextBreaker breaker = new TextBreaker(text, locale);
         for (int i = 0; i < breaker.segments.size(); i++) {
@@ -65,16 +65,11 @@ public class AppController implements Initializable {
         textarea1.wrapTextProperty().bind(wrapText1.selectedProperty());
         wrapText1.setSelected(true);
 
-        final ObservableList<MyLocale> list = FXCollections.observableArrayList();
-        MyLocale defaultMyLocale = new MyLocale(Locale.getDefault());
-        for (final Locale locale : Locale.getAvailableLocales()) {
-            final MyLocale myLocale = new MyLocale(locale);
-            if (locale == Locale.getDefault()) {
-                defaultMyLocale = myLocale;
-            }
-            list.add(myLocale);
-        }
+        final ObservableList<Locale> list = FXCollections.observableArrayList();
+        list.addAll(Locale.getAvailableLocales());
         locale1.setItems(list.sorted());
-        locale1.getSelectionModel().select(defaultMyLocale);
+        locale1.setConverter(new LocaleStringConverter());
+
+        locale1.getSelectionModel().select(Locale.getDefault());
     }
 }
