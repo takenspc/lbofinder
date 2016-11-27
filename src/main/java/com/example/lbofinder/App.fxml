@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@App.css" fx:controller="com.example.lbofinder.AppController" dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
+    <items>
+        <AnchorPane>
+            <children>
+                <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="ALWAYS" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label prefWidth="100.0" text="Text" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <CheckBox fx:id="wrapText1" mnemonicParsing="false" text="Wrap lines in the text area" GridPane.columnIndex="1">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" />
+                            </GridPane.margin>
+                        </CheckBox>
+                        <TextArea fx:id="textarea1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" />
+                            </GridPane.margin>
+                        </TextArea>
+                        <Label text="Locale" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <ComboBox fx:id="locale1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" />
+                            </GridPane.margin>
+                        </ComboBox>
+                        <Button id="button1" mnemonicParsing="false" onAction="#updateText" text="Find line break opportunities" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" top="5.0" />
+                            </GridPane.margin>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </GridPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane>
+            <children>
+                <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="ALWAYS" />
+                    </rowConstraints>
+                    <children>
+                        <TextFlow fx:id="textflow1" />
+                    </children>
+                </GridPane>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </AnchorPane>
+    </items>
+</SplitPane>
