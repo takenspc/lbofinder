@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 public class App extends Application {
     @Override
     public void start(final Stage primaryStage) throws IOException {
-        final SplitPane root = (SplitPane) FXMLLoader.load(getClass().getResource("App.fxml"));
+        final SplitPane root = (SplitPane) FXMLLoader.load(getClass().getResource("/App.fxml"));
         final Scene scene = new Scene(root, 600, 400);
 
         primaryStage.setTitle("Find line break oppotunities");
