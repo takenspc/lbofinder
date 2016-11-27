@@ -62,8 +62,8 @@ public class AppController implements Initializable {
     }
 
     public void initialize(URL location, ResourceBundle resources) {
-        textarea1.wrapTextProperty().bindBidirectional(wrapText1.selectedProperty());
-        textarea1.setWrapText(true);
+        textarea1.wrapTextProperty().bind(wrapText1.selectedProperty());
+        wrapText1.setSelected(true);
 
         final ObservableList<MyLocale> list = FXCollections.observableArrayList();
         MyLocale defaultLocale = new MyLocale(Locale.getDefault());
