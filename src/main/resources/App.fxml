@@ -23,31 +23,31 @@
                         <RowConstraints vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label labelFor="$textarea1" minWidth="50.0" text="Text" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                        <Label labelFor="$locale1" minWidth="50.0" text="Locale">
                             <GridPane.margin>
                                 <Insets bottom="5.0" />
                             </GridPane.margin>
                         </Label>
-                        <CheckBox fx:id="wrapText1" mnemonicParsing="false" text="Wrap lines in the text area" GridPane.columnIndex="1">
-                            <GridPane.margin>
-                                <Insets bottom="5.0" />
-                            </GridPane.margin>
-                        </CheckBox>
-                        <TextArea fx:id="textarea1" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                            <GridPane.margin>
-                                <Insets bottom="5.0" />
-                            </GridPane.margin>
-                        </TextArea>
-                        <Label labelFor="$locale1" minWidth="50.0" text="Locale" GridPane.rowIndex="3">
-                            <GridPane.margin>
-                                <Insets bottom="5.0" />
-                            </GridPane.margin>
-                        </Label>
-                        <ComboBox fx:id="locale1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <ComboBox fx:id="locale1" GridPane.columnIndex="1">
                             <GridPane.margin>
                                 <Insets bottom="5.0" />
                             </GridPane.margin>
                         </ComboBox>
+                        <Label labelFor="$textarea1" minWidth="50.0" text="Text" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <CheckBox fx:id="wrapText1" mnemonicParsing="false" text="Wrap lines in the text area" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" />
+                            </GridPane.margin>
+                        </CheckBox>
+                        <TextArea fx:id="textarea1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" />
+                            </GridPane.margin>
+                        </TextArea>
                         <Button id="button1" mnemonicParsing="false" onAction="#updateText" text="Find line break opportunities" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4">
                             <GridPane.margin>
                                 <Insets bottom="5.0" top="5.0" />
