@@ -53,8 +53,8 @@ public class AppController implements Initializable {
         for (int i = 0; i < breaker.segments.size(); i++) {
             final String segment = breaker.segments.get(i);
             final Text t = new Text(segment);
-            t.setFill(colors[i % 2]);
-            t.setUnderline(i % 2 == 0);
+            t.setFill(colors[i % colors.length]);
+            t.setUnderline(i % colors.length == 0);
             texts.add(t);
         }
         textflow1.getChildren().clear();
