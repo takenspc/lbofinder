@@ -23,7 +23,7 @@
                         <RowConstraints vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label minWidth="50.0" text="Text" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                        <Label labelFor="$textarea1" minWidth="50.0" text="Text" GridPane.rowIndex="1" GridPane.rowSpan="2">
                             <GridPane.margin>
                                 <Insets bottom="5.0" />
                             </GridPane.margin>
@@ -38,7 +38,7 @@
                                 <Insets bottom="5.0" />
                             </GridPane.margin>
                         </TextArea>
-                        <Label minWidth="50.0" text="Locale" GridPane.rowIndex="3">
+                        <Label labelFor="$locale1" minWidth="50.0" text="Locale" GridPane.rowIndex="3">
                             <GridPane.margin>
                                 <Insets bottom="5.0" />
                             </GridPane.margin>
