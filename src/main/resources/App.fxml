@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.text.*?>
 
-<SplitPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@App.css" fx:controller="com.example.lbofinder.AppController" dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@App.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lbofinder.AppController">
     <items>
         <AnchorPane>
             <children>
@@ -23,7 +23,7 @@
                         <RowConstraints vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label prefWidth="100.0" text="Text" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                        <Label minWidth="50.0" text="Text" GridPane.rowIndex="1" GridPane.rowSpan="2">
                             <GridPane.margin>
                                 <Insets bottom="5.0" />
                             </GridPane.margin>
@@ -38,7 +38,7 @@
                                 <Insets bottom="5.0" />
                             </GridPane.margin>
                         </TextArea>
-                        <Label text="Locale" GridPane.rowIndex="3">
+                        <Label minWidth="50.0" text="Locale" GridPane.rowIndex="3">
                             <GridPane.margin>
                                 <Insets bottom="5.0" />
                             </GridPane.margin>
