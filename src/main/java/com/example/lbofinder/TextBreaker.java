@@ -1,6 +1,7 @@
 package com.example.lbofinder;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
@@ -18,5 +19,7 @@ public class TextBreaker {
         for (int start = breakIterator.first(), end = breakIterator.next(); end != BreakIterator.DONE; start = end, end = breakIterator.next()) {
             segments.add(text.substring(start, end));
         }
+
+        segments = Collections.unmodifiableList(segments);
     }
 }
