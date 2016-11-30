@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Noto Sans CJK JP';
+    font-family: 'Noto Sans CJK JP Regular';
     src: url('NotoSansCJKjp-Regular.otf');
 }
 
 .root {
-    -fx-font-family: 'Noto Sans CJK JP', sans-serif; 
+    -fx-font-family: 'Noto Sans CJK JP Regular', sans-serif; 
 }
 
 #textarea1 {
