@@ -25,12 +25,12 @@ import javafx.util.StringConverter;
 
 class LocaleStringConverter extends StringConverter<Locale> {
     @Override
-    public String toString(Locale locale) {
+    public String toString(final Locale locale) {
         return locale.getDisplayName();
     }
 
     @Override
-    public Locale fromString(String languageTag) {
+    public Locale fromString(final String languageTag) {
         return Locale.forLanguageTag(languageTag);
     }
 }
@@ -46,7 +46,7 @@ public class AppController implements Initializable {
     CheckBox wrapText1;
 
     private final Color[] colors = { Color.rgb(128, 0, 0), Color.rgb(0, 64, 32) };
-    private static boolean isRTL(Locale locale) {
+    private static boolean isRTL(final Locale locale) {
         return ULocale.forLocale(locale).isRightToLeft();
     }
 
@@ -70,7 +70,7 @@ public class AppController implements Initializable {
         textflow1.setTextAlignment(isRTL(locale) ? TextAlignment.RIGHT : TextAlignment.LEFT);
     }
 
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(final URL location, final ResourceBundle resources) {
         textarea1.wrapTextProperty().bind(wrapText1.selectedProperty());
         wrapText1.setSelected(true);
 
