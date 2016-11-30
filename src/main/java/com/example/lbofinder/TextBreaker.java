@@ -10,7 +10,7 @@ import com.ibm.icu.text.BreakIterator;
 public class TextBreaker {
     public List<String> segments;
 
-    public TextBreaker(String text, Locale locale) {
+    public TextBreaker(final String text, final Locale locale) {
         BreakIterator breakIterator = BreakIterator.getLineInstance(locale);
         breakIterator.setText(text);
 

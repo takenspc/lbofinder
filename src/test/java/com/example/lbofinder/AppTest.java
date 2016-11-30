@@ -18,7 +18,7 @@ public class AppTest extends TestCase {
      * @param testName
      *            name of the test case
      */
-    public AppTest(String testName) {
+    public AppTest(final String testName) {
         super(testName);
     }
 
@@ -33,8 +33,8 @@ public class AppTest extends TestCase {
      * Rigourous Test :-)
      */
     public void testApp() {
-        String test1 = "Hello, world!";
-        TextBreaker breaker = new TextBreaker(test1, Locale.ENGLISH);
+        final String test1 = "Hello, world!";
+        final TextBreaker breaker = new TextBreaker(test1, Locale.ENGLISH);
         assertThat(breaker.segments, is(contains("Hello, ", "world!")));
     }
 }
